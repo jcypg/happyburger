@@ -1,25 +1,30 @@
 
 body {
+    background-image: url("https://images2.alphacoders.com/104/1044159.jpg");
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    /*background-color: #f5f5f5;*/
+    color: aqua;
 }
 header {
-    background-color: #ff6347;
+    background-color: #103b54;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    
 }
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1, h2 {
-    color: #333;
+    color:aqua;
 }
 .form-group {
     margin-bottom: 15px;
@@ -39,10 +44,18 @@ input[type="text"], input[type="number"] {
 .result {
     margin-top: 20px;
     padding: 10px;
-    background-color: #e0f7fa;
+    /*background-color: #e0f7fa;*/
     border: 1px solid #81d4fa;
+    
 }
 
+p {
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 0px 70px #159be9;
+    
+    
+}
 
 form button {
     height: 35px;
@@ -54,3 +67,12 @@ form button {
 form button:hover {
     background-color: #81d4fa;
 }
+
+form input {
+    
+        opacity: 0.3; /* 70% opacity, 30% transparent */
+        background-color: #103b54; /* Just an example background color */
+        padding: 20px;
+        border-radius: 10px;
+    }
+    
