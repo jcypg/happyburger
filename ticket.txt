@@ -1,0 +1,5 @@
+*****TIQUET DEL PEDIDO*****
+Cliente: 02
+Producto: $02
+Precio Final: $12.99
+***************************

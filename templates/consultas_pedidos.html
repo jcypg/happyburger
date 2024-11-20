@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Burger - Gestión de Pedidos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos/style.css') }}">
+
+</head>
+<body>
+    <header>
+        <h1>Happy Burger - Gestión de Pedidos</h1>
+    </header>
+    <div class="container">
+        <h2>Consultar Pedido</h2>
+        <form action="/" method="POST">
+            <div class="form-group">
+                <label for="pedido_numero">Número de Pedido:</label>
+                <input type="number" id="pedido_numero" name="pedido_numero" required>
+            </div>
+            <button type="submit">Consultar Pedido</button>
+        </form>
+
+        {% if datos_pedido %}
+        <div class="result">
+            <h3>Detalles del Pedido</h3>
+            <p><strong>Pedido:</strong> {{ datos_pedido['Pedido'] }}</p>
+            <p><strong>Cliente:</strong> {{ datos_pedido['Cliente'] }}</p>
+            <p><strong>Producto:</strong> {{ datos_pedido['Producto'] }}</p>
+            <p><strong>Precio:</strong> ${{ datos_pedido['Precio'] }}</p>
+        </div>
+        {% endif %}
+
+        <hr>
+
+    
+    </div>
+</body>
+</html>
