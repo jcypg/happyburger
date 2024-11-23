@@ -1,12 +1,15 @@
 from set_database import BaseDeDatos
 
 class Pedido:
+    # Clase para gestionar las operaciones relacionadas con los pedidos
 
     def __init__(self):
+        # Inicializa la conexion con la base de datos
         self.data = BaseDeDatos()
 
 
     def create_order(self, select_client, select_product):
+        # Crea un nuevo pedido asociado un cliente con un producto
         conexion = self.data.openConexion()
         if conexion:
             try:
@@ -46,6 +49,7 @@ class Pedido:
 
 
     def order_cancel(self, order_id):
+        # Cancela un pedido exitente por su ID
         conexion = self.data.openConexion()
         if conexion:
             try:

@@ -3,12 +3,15 @@ import os
 
 
 class BaseDeDatos:
+    # Clase para gestionar la conexion y operaciones con la base de datos
 
     def __init__(self, db_name='happy_burger.db'):
+        # Inicializa la clase con la ruta de la base de datos
         self.db_name = db_name
 
 
     def createDatabase(self):
+        # Abre una conexion a la base de datos
         try:
             conect = sqlite3.connect(self.db_name)
             conect.close()
@@ -35,12 +38,14 @@ class BaseDeDatos:
         
     
     def closeConexion(self, conexion):
+        # Cierra la conexion a la base de datos
         if conexion:
             conexion.close()
             print('conexion cerrada')
 
 
     def createTable(self):
+        # Crea las tablas necesarias para la aplicacion si no existen
         conexion = self.openConexion()
         if conexion:
             try:

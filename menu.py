@@ -1,11 +1,14 @@
 from set_database import BaseDeDatos
 
 class Menu:
+    #Clase para gestionar las operaciones relacionadas con el menu de productos
 
     def __init__(self):
+        # Inicializa la conexion con la base de datos
         self.sql = BaseDeDatos()
 
     def agregar_productos(self, clave, nombre, precio):
+        # Agrega un nuevo producto al menu
         conexion = self.sql.openConexion()
         if conexion:
             try:
@@ -22,6 +25,7 @@ class Menu:
                 self.sql.closeConexion(conexion)
 
     def eliminar_producto(self, clave):
+        # Elimina un producto del menu por su clave
         conexion = self.sql.openConexion()
         if conexion:
               
@@ -40,6 +44,7 @@ class Menu:
 
 
     def actualizar_producto(self, clave, nombre=None, precio=None):
+        # Actualiza los datos de un producto en al menu
          
         conexion = self.sql.openConexion()
         if conexion:

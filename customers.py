@@ -1,11 +1,14 @@
 from set_database import BaseDeDatos
 
 class Clientes:
+    # Clase para gestionar las operaciones relacionadas con clientes en la base de datos
 
     def __init__(self):
         self.db = BaseDeDatos()
+        # Inicializa la conexion con la base de datos
 
     def agregar_cliente(self, clave, nombre, direccion, correo_electronico, telefono):
+        # Agrega un nuevo cliente al la tabla 'clientes'
         conexion = self.db.openConexion()
         if conexion:
             try:
@@ -22,6 +25,7 @@ class Clientes:
                 self.db.closeConexion(conexion)
             
     def eliminar_cliente(self, clave):
+        # Elimina un cliente existente por su clave
         conexion = self.db.openConexion()
         if conexion:
             try:
@@ -38,6 +42,7 @@ class Clientes:
                 self.db.closeConexion(conexion)
 
     def actualizar_cliente(self, clave, nombre=None, direccion=None, correo_electronico=None, telefono=None):
+        # Actualiza los datos de un cliente 
         conexion = self.db.openConexion()
         if conexion:
             try:
